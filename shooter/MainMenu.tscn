@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://btie3xb8y6kke"]
+[gd_scene load_steps=4 format=3 uid="uid://btie3xb8y6kke"]
 
 [ext_resource type="Script" uid="uid://cte3hlseh3afp" path="res://main_menu.gd" id="1_i26rj"]
 [ext_resource type="FontFile" uid="uid://l7y4bb613huj" path="res://EaDesignerBold.ttf" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://bra0kc76a016b" path="res://zombies.jpg" id="2_h7a2f"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -35,6 +36,11 @@ offset_bottom = 261.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 17
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(152.5, 30.25)
+scale = Vector2(1.84967, 1.52128)
+texture = ExtResource("2_h7a2f")
 
 [node name="Jugar" type="Button" parent="VBoxContainer"]
 layout_mode = 2

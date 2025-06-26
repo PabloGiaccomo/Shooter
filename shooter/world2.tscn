@@ -1,0 +1,204 @@
+[gd_scene load_steps=8 format=3 uid="uid://28sy28yebaxc"]
+
+[ext_resource type="Script" uid="uid://dsxhmi632fcw2" path="res://GameManager.gd" id="1_mu6c3"]
+[ext_resource type="Texture2D" uid="uid://bkogohwdu4c4l" path="res://white_sq.png" id="2_46256"]
+[ext_resource type="Script" uid="uid://bwu7uld3hc72f" path="res://button.gd" id="3_f5bfu"]
+[ext_resource type="PackedScene" uid="uid://0by3gm6uyxvu" path="res://player.tscn" id="4_xjnkp"]
+[ext_resource type="PackedScene" uid="uid://dvqcbaw00qg0f" path="res://zombie.tscn" id="5_mf6h1"]
+[ext_resource type="PackedScene" uid="uid://bdq1ki7oc5ywy" path="res://spawn_zombie.tscn" id="6_k023l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
+size = Vector2(64.2201, 64)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_mu6c3")
+
+[node name="Enviroment" type="Node2D" parent="."]
+
+[node name="Floor" type="Sprite2D" parent="Enviroment"]
+self_modulate = Color(0.933333, 0.72549, 0.733333, 0.0352941)
+z_index = -2
+y_sort_enabled = true
+position = Vector2(335, 10)
+scale = Vector2(43.6396, 30.9482)
+texture = ExtResource("2_46256")
+
+[node name="Block" type="Sprite2D" parent="Enviroment"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(97, 55)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/StaticBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block2" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(96, 252)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block2/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block3" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(159, 436)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block3/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block4" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(159, 436)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block5" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(561, 172)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block5"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block5/StaticBody2D"]
+position = Vector2(-300, 179)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block6" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(785, 112)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block6"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block6/StaticBody2D"]
+position = Vector2(-298, 179)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block7" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(909, 473)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block7"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block7/StaticBody2D"]
+position = Vector2(-298, 179)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block8" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(478.875, 617)
+scale = Vector2(18.3164, 0.359375)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block8"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block8/StaticBody2D"]
+position = Vector2(-297.829, 167.87)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block9" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(470.375, -71)
+scale = Vector2(18.6758, 0.359375)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block9"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block9/StaticBody2D"]
+position = Vector2(-297.752, 187.348)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block10" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(-115.313, 273.875)
+scale = Vector2(0.365234, 11.0039)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block10"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block10/StaticBody2D"]
+position = Vector2(-291.668, 179.647)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="Block11" type="Sprite2D" parent="Enviroment/Block"]
+modulate = Color(3.72304e-05, 3.72304e-05, 3.72304e-05, 1)
+position = Vector2(1087, 273.719)
+scale = Vector2(0.495118, 11.0713)
+texture = ExtResource("2_46256")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Enviroment/Block/Block11"]
+position = Vector2(298, -179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enviroment/Block/Block11/StaticBody2D"]
+position = Vector2(-298, 178.754)
+shape = SubResource("RectangleShape2D_fj7yv")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -567.0
+offset_top = -315.0
+offset_right = -514.0
+offset_bottom = -238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "☰"
+script = ExtResource("3_f5bfu")
+
+[node name="Player" parent="." instance=ExtResource("4_xjnkp")]
+position = Vector2(580, 332)
+
+[node name="Zombie" parent="." instance=ExtResource("5_mf6h1")]
+position = Vector2(324, 152)
+
+[node name="Zombie2" parent="." instance=ExtResource("5_mf6h1")]
+position = Vector2(596, 107)
+
+[node name="Zombie3" parent="." instance=ExtResource("5_mf6h1")]
+position = Vector2(173, 431)
+
+[node name="Zombie5" parent="." instance=ExtResource("5_mf6h1")]
+position = Vector2(1036, 197)
+
+[node name="Zombie6" parent="." instance=ExtResource("5_mf6h1")]
+position = Vector2(1052, 436)
+
+[node name="Area2D" parent="." instance=ExtResource("6_k023l")]
+position = Vector2(-1, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 952.0
+offset_top = 13.0
+offset_right = 1114.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+
+[connection signal="pressed" from="UI/Button" to="UI/Button" method="_on_pressed"]
