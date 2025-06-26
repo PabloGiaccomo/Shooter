@@ -75,8 +75,8 @@ text = "Opciones"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

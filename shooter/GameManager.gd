@@ -4,7 +4,7 @@ extends Node2D
 var score = 0
 
 func _ready():
-	update_score_ui()
+	reset_score()
 
 func increase_score():
 	score += 1
