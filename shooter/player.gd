@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @onready var ray_cast_2d = $RayCast2D
 @export var move_speed = 200
 
@@ -32,6 +31,7 @@ func _physics_process(delta):
 	if dead:
 		return
 	var move_dir = Input.get_vector("move_left","move_right","move_up","move_down")
+	print("Move Dir: ", move_dir)
 	velocity = move_dir * move_speed
 	move_and_slide()
 
@@ -46,6 +46,7 @@ func kill():
 	z_index = -1
 	
 func restart():
+	GameManager.reset_score()
 	get_tree().reload_current_scene()
 
 	

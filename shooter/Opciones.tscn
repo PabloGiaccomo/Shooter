@@ -28,10 +28,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -154.5
-offset_top = -132.5
-offset_right = 154.5
-offset_bottom = 132.5
+offset_left = -154.0
+offset_top = -46.0
+offset_right = 155.0
+offset_bottom = 251.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 17
@@ -61,22 +61,22 @@ text = "Salir"
 [node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.159
-anchor_right = 0.5
-anchor_bottom = 0.159
-offset_left = -157.0
-offset_top = -54.032
-offset_right = 157.0
-offset_bottom = 41.968
+anchor_top = 0.242
+anchor_right = 0.502
+anchor_bottom = 0.242
+offset_left = -245.0
+offset_top = -75.816
+offset_right = 246.696
+offset_bottom = 75.184
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 110
 text = "Opciones"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continuar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Reiniciar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgnlvkk6kvct7"]
+
+[ext_resource type="Script" uid="uid://i0uhsghsgv8u" path="res://instrucciones.gd" id="1_5c5qo"]
+
+[sub_resource type="Theme" id="Theme_5c5qo"]
+
+[node name="Instrucciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5c5qo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.310617, 0.310617, 0.310617, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -562.0
+offset_top = -46.0
+offset_right = 547.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_5c5qo")
+theme_override_font_sizes/font_size = 50
+text = "Para moverse utilizar A - W - S - D
+Disparar con el click Izquierdo
+Para apuntar colocar el curso sobre el zombie"
+
+[node name="Regresar" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Regresar
+"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.242
+anchor_right = 0.502
+anchor_bottom = 0.242
+offset_left = -433.0
+offset_top = -67.816
+offset_right = 426.696
+offset_bottom = 83.184
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 110
+text = "INSTRUCCIONES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Regresar" to="." method="_on_regresar_pressed"]
